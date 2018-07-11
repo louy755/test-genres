@@ -3,7 +3,7 @@
 <div id="main">
   <% @genres.each do |genre| %>
   <div class="container <%= selected(genre.id) %>" data-name=<%= "#{genre.name}" %>>
-    <%= image_tag(genre.url, height: '300', width: '450') %>
+    <%= image_tag(genre.url, height: '300', width: '400') %>
     <div class="content <%= reveal_name(genre.id) %>">
       <center><h1><%= genre.name.upcase %></h1></center>
       <%= link_to 'Show', genre %>
