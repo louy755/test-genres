@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Genre', new_genre_path, class: "button buttonblue" %><br>
+<div id="main">
+  <% @genres.each do |genre| %>
+  <div class="container <%= selected(genre.id) %>" data-name=<%= "#{genre.name}" %>>
+    <%= image_tag(genre.url, height: '300', width: '450') %>
+    <div class="content <%= reveal_name(genre.id) %>">
+      <center><h1><%= genre.name.upcase %></h1></center>
+    </div>
+    <div class='description <%= chosen(genre.id) %>'>
+      <center><h1><%= genre.name.upcase %></h1></center>
+      <center><h2><%= genre.description %><h2></center>
+    </div>
+  </div>
+  <% end %>
+</div>
+<br>
+<div>
+  <%= button_to 'Choose', choose_genres_path, class: "button buttonblue choose-button" %>
+</div>

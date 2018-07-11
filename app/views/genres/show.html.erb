@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @genre.name %><br>
+  <%= @genre.description %><br>
+  <%= image_tag(@genre.url, height: '100', width: '200') %><br>
+  <%= link_to 'Download Image', @genre.url, download: '' %> |
+  <%= link_to 'Destroy', @genre, method: :delete, data: { confirm: 'Are you sure?'} %>
+</p>
+
+<%= link_to 'Edit', edit_genre_path(@genre) %> |
+<%= link_to 'Back', genres_path %>
