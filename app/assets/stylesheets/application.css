@@ -74,6 +74,7 @@
   color: #ffffff;
   z-index: 1000;
   position: absolute;
+  height: 220px;
   bottom: 21px;
   width: 81%;
 }

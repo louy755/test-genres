@@ -6,10 +6,11 @@
     <%= image_tag(genre.url, height: '300', width: '400') %>
     <div class="content <%= reveal_name(genre.id) %>">
       <center><h1><%= genre.name.upcase %></h1></center>
+      <%= link_to 'Show', genre %>
     </div>
     <div class='description <%= chosen(genre.id) %>'>
       <center><h1><%= genre.name.upcase %></h1></center>
-      <center><h2><%= genre.description %><h2></center>
+      <center><h3><%= genre.description %><h3></center>
     </div>
   </div>
   <% end %>
