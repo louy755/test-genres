@@ -34,11 +34,12 @@ RSpec.configure do |config|
       with.test_framework :rspec
 
       # Choose one or more libraries:
-       with.library :active_record
-       with.library :active_model
-       with.library :action_controller
-       # Or, choose the following (which implies all of the above):
-       with.library :rails
+      with.library :active_record
+      with.library :active_model
+      with.library :action_controller
+      # Or, choose the following (which implies all of the above):
+      with.library :rails
+    end
   end
   config.use_transactional_fixtures = true
 

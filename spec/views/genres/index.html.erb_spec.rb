@@ -7,13 +7,16 @@ RSpec.describe "genres/index", type: :view do
         :name => "Name"
       ),
       Genre.create!(
-        :name => "Name"
+        :name => "Name2"
       )
     ])
+    Genre.all.each { |genre| genre.url.attach(io: File.open('tmp/storage.pdf'), filename: 'storage.pdf') }
   end
 
   it "renders a list of genres" do
     render
-    assert_select "tr>td", :text => "Name".to_s, :count => 2
+
+    expect(rendered).to have_css("center > h1", :text => "NAME")
+    expect(rendered).to have_css("center > h1", :text => "NAME2")
   end
 end
